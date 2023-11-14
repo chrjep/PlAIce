@@ -1,0 +1,3 @@
+git add .gitignore
+git commit -m "Tilføj .env til .gitignore"
+git push origin master
