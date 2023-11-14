@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Assistant</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>GPT Assistant</h1>
+    <label for="userInput">Spørg GPT:</label>
+    <input type="text" id="userInput" placeholder="Skriv dit spørgsmål her...">
+    <button onclick="askGPT()">Send</button>
+    <div id="response"></div>
+
+    <script>
+        function askGPT() {
+            const userInput = $('#userInput').val();
+            // Send brugerinput til GPT-assistenten
+            // Erstatt nedenstående URL med den korrekte API-endepunkt fra OpenAI
+            const apiUrl = 'https://eksempel.com/api/gpt';
+            
+            $.post(apiUrl, { input: userInput }, function(data) {
+                // Vis svaret fra GPT-assistenten
+                $('#response').text(data.output);
+            });
+        }
+    </script>
+</body>
+</html>
