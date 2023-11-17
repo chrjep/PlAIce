@@ -16,18 +16,19 @@ Powered by AI</h2>
     <button onclick="askGPT()">Send</button>
     <div id="response"></div>
 
-    <script>
-        function askGPT() {
-            const userInput = $('#userInput').val();
-            // Send brugerinput til GPT-assistenten
-            // Erstatt nedenstående URL med den korrekte API-endepunkt fra OpenAI
-            const apiUrl = 'https://eksempel.com/api/gpt';
-            
-            $.post(apiUrl, { input: userInput }, function(data) {
-                // Vis svaret fra GPT-assistenten
-                $('#response').text(data.output);
-            });
-        }
-    </script>
+<script>
+    function askGPT() {
+        const userInput = $('#userInput').val();
+
+        // Erstatt nedenstående URL med den korrekte Netlify Function sti
+        const apiUrl = '/functions/gpt';
+
+        $.post(apiUrl, { input: userInput }, function(data) {
+            // Vis svaret fra Netlify Function
+            $('#response').text(data.output);
+        });
+    }
+</script>
+
 </body>
 </html>
