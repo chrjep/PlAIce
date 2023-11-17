@@ -21,7 +21,7 @@ Powered by AI</h2>
         const userInput = $('#userInput').val();
 
         // Erstatt nedenstående URL med den korrekte Netlify Function sti
-        const apiUrl = '/functions/gpt';
+        const apiUrl = '/.netlify/functions/gpt';
 
         $.post(apiUrl, { input: userInput }, function(data) {
             // Vis svaret fra Netlify Function
