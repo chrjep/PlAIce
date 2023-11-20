@@ -5,10 +5,10 @@
     "main": "index.js",
     "scripts": {
         "start": "npm run serve",
-        "build": "mkdir build && copy index.html build/"
+        "build": "npm install && mkdir -p build && cp index.html build/"
     },
     "repository": {
         "type": "git",
-        "url": "URL-til-dit-GitHub-repository"
+        "url": "https://github.com/chrjep/PlAIce.git"
     }
 }
