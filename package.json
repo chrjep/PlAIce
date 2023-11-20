@@ -1,0 +1,14 @@
+{
+    "name": "plaice-main",
+    "version": "1.0.0",
+    "description": "Beskrivelse af dit projekt",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run serve",
+        "build": "cp index.html build/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "URL-til-dit-GitHub-repository"
+    }
+}
