@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlAIce</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>PlAIce</h1>
+    <h2>- Find your date at the right time, at the right "PlAIce"
+Powered by AI</h2>
+    <label for="userInput">Spørg GPT:</label>
+    <input type="text" id="userInput" placeholder="Indtast din by, og find barer med flest singler her...">
+    <button onclick="askGPT()">Send</button>
+    <div id="response"></div>
+
+ <script>
+    function askGPT() {
+        const userInput = $('#userInput').val();
+
+        // Erstatt nedenstående URL med den korrekte Netlify Function sti
+        const apiUrl = '/.netlify/functions/gpt';
+
+        $.post(apiUrl, { input: userInput }, function(data) {
+            // Vis svaret fra Netlify Function
+            $('#response').text(data.output);
+        });
+    }
+</script>
+</body>
+</html>
