@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "npm run serve",
-        "build": "cp index.html build/"
+        "build": "npm install && mkdir -p build && cp index.html build/"
     },
     "repository": {
         "type": "git",
